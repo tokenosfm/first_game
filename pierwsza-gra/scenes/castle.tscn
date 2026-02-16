@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cd74volw2d3d5" path="res://assets/Tiny Swords (Free Pack)/Buildings/Black Buildings/Castle.png" id="1_bly62"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ysgy"]
-size = Vector2(261.538, 130)
+size = Vector2(260.76898, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjj26"]
 size = Vector2(286.30716, 179.40672)
@@ -18,7 +18,7 @@ scale = Vector2(0.8, 0.82)
 texture = ExtResource("1_bly62")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 28.000004)
+position = Vector2(-5.9604645e-08, 56)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_0ysgy")
 

@@ -28,12 +28,8 @@ func _unhandled_input(event):
 			var target_grid_pos = grid_manager.world_to_grid(mouse_pos)
 			
 			if grid_manager.is_cell_vacant(target_grid_pos):
-				var current_grid_pos = grid_manager.world_to_grid(selected_object.global_position)
-				
-				# Logika zamiany pól:
-				grid_manager.release_cell(current_grid_pos)
-				grid_manager.claim_cell(target_grid_pos, selected_object)
-				selected_object.target_position = grid_manager.grid_to_world(target_grid_pos)
+				if selected_object.has_method("move_to_target"):
+					selected_object.move_to_target(target_grid_pos)
 			else:
 				print("To pole jest już zajęte!")
 
