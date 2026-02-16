@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://u6p7hd7gnlkq"]
+
+[ext_resource type="Script" uid="uid://cs82x0pqckwmg" path="res://scripts/recruitment_menu.gd" id="1_4rkxg"]
+
+[node name="RecruitmentMenu" type="CanvasLayer"]
+script = ExtResource("1_4rkxg")
+
+[node name="PanelContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="archer" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "Archer"
+
+[node name="warrior" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "Warrior"
+
+[connection signal="pressed" from="PanelContainer/archer" to="." method="_on_archer_pressed"]
+[connection signal="pressed" from="PanelContainer/warrior" to="." method="_on_warrior_pressed"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dda04lhwsdo82"]
+
+[ext_resource type="Script" uid="uid://cr4rr2s07q05e" path="res://scripts/castle.gd" id="1_0ysgy"]
+[ext_resource type="Texture2D" uid="uid://cd74volw2d3d5" path="res://assets/Tiny Swords (Free Pack)/Buildings/Black Buildings/Castle.png" id="1_bly62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ysgy"]
+size = Vector2(261.538, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjj26"]
+size = Vector2(286.30716, 179.40672)
+
+[node name="Node2D" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_0ysgy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.82)
+texture = ExtResource("1_bly62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 28.000004)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_0ysgy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(3, 12)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_rjj26")
